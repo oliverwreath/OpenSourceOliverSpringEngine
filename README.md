@@ -12,7 +12,7 @@
 * Supporting login with Google out of the box!  
 * Crazy handy data grid integration with RESTful as well as their unit-test out of the box!  
 
-# Quick Configurations: 
+# Quick Configurations 
 * 1 rename src/main/resources/application-dev.properties.bak TO application-dev.properties
 
 * 2 Then change the following: 
@@ -23,7 +23,7 @@ oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_HOSTNAME
 
 * Optional read of Switching Spring Boot environments Made Easy (dev, prod) - https://link.medium.com/f7LppJ7SbW
 
-# Quick Test: 
+# Quick Test 
 * 1 Then Run Your Tests right away to make sure everything adapts comfortably. 
 ![Run All Test](https://github.com/oliverwreath/OpenSourceOliverSpringEngine/blob/master/src/main/resources/static/ReadmePictures/Run_All_Tests.png?raw=true)
 
