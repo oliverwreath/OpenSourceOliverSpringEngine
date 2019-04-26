@@ -4,6 +4,12 @@
 * lets you focus on the money-making business logic.  
 * with a default PayPal payment button and user login infrastructure from day 1. 
 
+# Versions
+* Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+* jdk1.8.0_201
+* Hibernate Core {5.3.7.Final}
+* org.hibernate.dialect.MySQL57Dialect
+
 # Benefits of this engine
 * Supporting 100 * Efficient JCache + EhCache out of the box! 
 * Supporting PalPal Button out of the box!  
