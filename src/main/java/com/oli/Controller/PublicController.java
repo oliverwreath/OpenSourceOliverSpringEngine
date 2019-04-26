@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping(value = "/public")
 public class PublicController {
-    @GetMapping(value = "/classroom")
+    @GetMapping(value = "/index")
     public String getClassroom() {
-        return "classroom";
+        return "index";
     }
 }
