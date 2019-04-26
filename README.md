@@ -25,6 +25,7 @@
 * Login Audit. 
 * Reports and Anylytics. 
 * Crazy handy data grid interaction. 
+* i18n Localization. 
 * Scheduling tasks. Optional Read: https://link.medium.com/5KDrJgC14V
 * Cron to cleanup excessive audit data 3 a.m. everyday. 
 * utf8mb4 internationalization! Optional Read: The utf8mb4 magic https://link.medium.com/FZxI5ZoXbW
