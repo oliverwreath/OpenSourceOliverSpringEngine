@@ -10,4 +10,4 @@ spring.datasource.username=YOUR_DB_INSTANCE_USERNAME
 spring.datasource.password=YOUR_DB_INSTANCE_PASSWORD
 oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_HOSTNAME
 
-![Run Test](static/ReadmePictures/Annotation 2019-04-25 221012.png)
+![Run Test](https://github.com/oliverwreath/OpenSourceOliverSpringEngine/blob/master/src/main/resources/static/ReadmePictures/Annotation%202019-04-25%20221012.png?raw=true)
