@@ -4,6 +4,12 @@
 * lets you focus on the money-making business logic.  
 * with a default PayPal payment button and user login infrastructure from day 1. 
 
+# Benefits of this engine
+* Supporting 100 * Efficient JCache + EhCache out of the box! 
+* Supporting PalPal Payments out of the box!  
+* Supporting Spring Login Audit out of the box!  
+* Supporting Spring Security FormLogin out of the box!  
+* Supporting login with Google out of the box!  
 
 # Quick Configurations: 
 * 1 rename src/main/resources/application-dev.properties.bak TO application-dev.properties
