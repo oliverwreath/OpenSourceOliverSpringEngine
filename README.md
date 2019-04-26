@@ -10,7 +10,7 @@
 * Hibernate Core {5.3.7.Final}
 * org.hibernate.dialect.MySQL57Dialect
 
-# Benefits of this engine - out of the box! 
+# Benefits out of the box! 
 * RESTful APIs. 
 * Highest quality TDD tests. 
 * Efficient Cache. 
