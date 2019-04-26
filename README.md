@@ -14,7 +14,7 @@
 * org.hibernate.dialect.MySQL57Dialect
 
 # Benefits out of the box! 
-* RESTful APIs. 
+* RESTful APIs. Optional Read: ag-Grid 101 — Material Design — RESTful https://link.medium.com/oS0E5fvXbW
 * Highest quality TDD tests. 
 * Efficient Cache. 
 * Accept payments with PayPal button.
@@ -22,9 +22,9 @@
 * Login Audit. 
 * Reports and Anylytics. 
 * Crazy handy data grid interaction. 
-* Scheduler to synchronize denormalize informations every 10 mins or so. 
+* Scheduling tasks. Optional Read: https://link.medium.com/5KDrJgC14V
 * Cron to cleanup excessive audit data 3 a.m. everyday. 
-* utf8mb4 internationalization! 
+* utf8mb4 internationalization! Optional Read: The utf8mb4 magic https://link.medium.com/FZxI5ZoXbW
 
 # Quick Configurations 
 * 1 rename src/main/resources/application-dev.properties.bak TO application-dev.properties
