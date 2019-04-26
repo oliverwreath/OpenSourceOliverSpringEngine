@@ -11,7 +11,7 @@
 <header data-layout-fragment="header" hidden>
 </header>
 
-<main data-layout-fragment="content" class="container" style="margin: auto;">
+<div data-layout-fragment="content" class="container" style="margin: auto;">
   <div data-th-if="${param.error}" data-th-text="${param.error}">
   </div>
   <div data-th-if="${param.logout}">
@@ -84,7 +84,7 @@
   <hr>
   <p>已有账号？</p>
   <a href="/login" class="btn btn-lg btn-primary btn-block">登 入</a>
-</main>
+</div>
 
 <!--<footer data-layout-fragment="footer" hidden>-->
 <!--</footer>-->

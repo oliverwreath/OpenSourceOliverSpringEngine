@@ -23,21 +23,20 @@
 <body class="d-flex flex-column h-100" style="background-color: #f5f5f5;">
 
 <!-- #1 Begin page header -->
-<header data-layout-fragment="header" class="h-25">
+<header data-layout-fragment="header" class="">
   <!-- Fixed navbar -->
-  <div class="h-100" style="background-color: #6CA3E8;">
-    <div class="container h-100" style="background-color: #4189E1;">
-      <div class="h-75 d-flex align-items-end text-white">
-        <img class="mb-4" src="../static/logo.svg" alt="logo" width="62" height="40">
-        <h4><b>Your Company<br>
-          Your Slogan</b></h4><br>
-      </div>
-      <nav class="h-25 navbar navbar-expand-md navbar-dark mb-4 border-top border-white small">
+<!--  <div class="h-100" style="background-color: #6CA3E8;">-->
+<!--    <div class="container h-100" style="background-color: #4189E1;">-->
+<!--      <div class="h-75 d-flex align-items-end text-white">-->
+<!--        <img class="mb-4" src="../static/logo.svg" alt="logo" width="62" height="40">-->
+<!--        <h4><b>Your Company<br>-->
+<!--          Your Slogan</b></h4><br>-->
+<!--      </div>-->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mb-4 small">
 <!--        <a class="navbar-brand" href="../public/index.html">-->
 <!--          首页-->
 <!--        </a>-->
-        <a class="navbar-brand" href="../public/classroom">
-          Home
+        <a class="navbar-brand" href="../public/classroom" data-th-text="#{text.home}">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,7 +76,7 @@
               <a class="nav-link" href="/register">Join For Free</a>
             </li>
             <li class="nav-item" data-sec-authorize="hasAnyRole('ADMIN', 'DEVELOPER')">
-              <a class="nav-link" href="../admin/index">管理入口</a>
+              <a class="nav-link" href="../admin/index" data-th-text="#{text.admin_portal}"></a>
             </li>
           </ul>
 
@@ -87,12 +86,14 @@
   <!--        </form>-->
         </div>
       </nav>
-    </div>
-  </div>
+<!--    </div>-->
+<!--  </div>-->
 </header>
 
 <!-- #2 Begin page content -->
-<main data-layout-fragment="content" role="main" class="flex-shrink-0">
+<main role="main" class="flex-shrink-0">
+  <div data-layout-fragment="content" class="container" style="padding: 60px 15px 0;">
+  </div>
 </main>
 
 <!-- #3 Begin page footer -->
@@ -146,4 +147,5 @@
   });
 </script>
 </body>
+
 </html>
