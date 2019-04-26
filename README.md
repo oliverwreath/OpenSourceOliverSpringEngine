@@ -4,6 +4,9 @@
 * lets you focus on the money-making business logic.  
 * with RESTful APIs, a PayPal payment button and user login infrastructure from day 1. 
 
+# Open Source License 
+* GNU Affero General Public License v3.0
+
 # Versions
 * Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
 * jdk1.8.0_201
