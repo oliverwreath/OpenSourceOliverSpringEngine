@@ -6,7 +6,7 @@
 
 # Benefits of this engine
 * Supporting 100 * Efficient JCache + EhCache out of the box! 
-* Supporting PalPal Payments out of the box!  
+* Supporting PalPal Button out of the box!  
 * Supporting Spring Login Audit out of the box!  
 * Supporting Spring Security FormLogin out of the box!  
 * Supporting login with Google out of the box!  
