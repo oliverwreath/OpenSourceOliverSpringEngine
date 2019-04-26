@@ -1,6 +1,6 @@
 # Oliver Spring Engine -  KickStart your project in 10 mins
 * Welcome! 
-* I always dream of a Universal Spring Boot Engine to kick-start projects. 
+* Why this project? I always dream of a Universal Spring Boot Engine to kick-start projects. 
 * lets you focus on the money-making business logic.  
 * with RESTful APIs, a PayPal payment button and user login infrastructure from day 1. 
 
