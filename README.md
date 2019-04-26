@@ -31,3 +31,4 @@ oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_HOSTNAME
 ![All Test Passed](https://github.com/oliverwreath/OpenSourceOliverSpringEngine/blob/master/src/main/resources/static/ReadmePictures/Tests_All_Passed.png?raw=true)
 
 # Quick Start and take it for a spin
+![Quick_Start](https://github.com/oliverwreath/OpenSourceOliverSpringEngine/blob/master/src/main/resources/static/ReadmePictures/Quick_Start.png?raw=true)
