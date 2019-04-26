@@ -17,6 +17,7 @@
 * Supporting Spring Security FormLogin out of the box!  
 * Supporting login with Google out of the box!  
 * Crazy handy data grid integration with RESTful as well as their unit-test out of the box!  
+* Support Scheduler to synchronize denormalize informations every 10 mins or so. Also use cron to cleanup excessive audit data 3 a.m. everyday. 
 * Supports internationalization by default! CREATE DATABASE Mydb_Name CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 # Quick Configurations 
