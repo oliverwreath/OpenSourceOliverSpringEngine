@@ -13,6 +13,8 @@ spring.datasource.username=YOUR_DB_INSTANCE_USERNAME
 spring.datasource.password=YOUR_DB_INSTANCE_PASSWORD
 oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_HOSTNAME
 
+* Optional read of Switching Spring Boot environments Made Easy (dev, prod) - https://link.medium.com/f7LppJ7SbW
+
 # Quick Test: 
 * 1 Then Run Your Tests right away to make sure everything adapts comfortably. 
 ![Run All Test](https://github.com/oliverwreath/OpenSourceOliverSpringEngine/blob/master/src/main/resources/static/ReadmePictures/Run_All_Tests.png?raw=true)
