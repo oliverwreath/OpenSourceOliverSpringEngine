@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html data-layout-decorate="~{layouts/default_layout.html}" lang="en">
+
+<head>
+  <title>Register</title>
+
+</head>
+
+<body class="d-flex flex-column h-100 text-center">
+
+<header data-layout-fragment="header" hidden>
+</header>
+
+<main data-layout-fragment="content" class="container" style="margin: auto;">
+  <div data-th-if="${param.error}" data-th-text="${param.error}">
+  </div>
+  <div data-th-if="${param.logout}">
+    You have logged out.
+  </div>
+  <form id="EditingValidation" onsubmit="return checkForm(this);" class="form-signin" action="#" data-th-action="@{/register/members/}" data-th-object="${memberEntity}" method="post">
+    <a href="../"><img class="mb-4" src="../static/logo.png" alt="logo" width="62" height="40"></a>
+    <h1 class="h3 mb-3 font-weight-normal">欢迎！请注册新会员！</h1>
+    <div class="row">
+      <div class="form-group col-4">
+        <label for="inputEmailId" class="">使用Email注册 *</label>
+        <input data-th-field="*{user.userEmail}" name="userEmail" type="email" id="inputEmailId" class="form-control" placeholder="name@example.com" required autofocus>
+      </div>
+      <div class="form-group col-4">
+        <label for="inputPasswordId" class="">设置一个密码 *</label>
+        <input data-th-field="*{user.password}" name="password" type="password" id="inputPasswordId" class="form-control" placeholder="Password" required>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-4">
+        <label for="inputNameId" class="">您怎么称呼？ *</label>
+        <input data-th-field="*{name}" name="name" type="text" id="inputNameId" class="form-control" placeholder="请输入名字" required>
+        <span class="bg-danger" data-th-if="${#fields.hasErrors('name')}" data-th-errors="*{name}"></span>
+      </div>
+<!--      <div class="form-group col-4">-->
+<!--        <label for="inputSchoolId" class="">毕业学校</label>-->
+<!--        <input data-th-field="*{school}" name="school" type="text" id="inputSchoolId" class="form-control" placeholder="school">-->
+<!--        <span class="bg-danger" data-th-if="${#fields.hasErrors('school')}" data-th-errors="*{school}"></span>-->
+<!--      </div>-->
+<!--      <div class="form-group col-4">-->
+<!--        <label for="inputMajorId" class="">专业</label>-->
+<!--        <input data-th-field="*{major}" name="major" type="text" id="inputMajorId" class="form-control" placeholder="major">-->
+<!--      </div>-->
+<!--      <div class="form-group col-4">-->
+<!--        <label for="inputYearOfGraduationId" class="">哪一年毕业？</label>-->
+<!--&lt;!&ndash;        <input name="yearOfGraduation" type="number" id="inputYearOfGraduationId" class="form-control" placeholder="yearOfGraduation" required>&ndash;&gt;-->
+<!--        <select data-th-field="*{yearOfGraduation}" class="form-control" id="inputYearOfGraduationId">-->
+<!--          <option value="0">Select Year</option>-->
+<!--          <option data-th-each="n : ${#numbers.sequence(2010,2030)}" data-th-value="${n}" data-th-text="${n}">2</option>-->
+<!--        </select>-->
+<!--      </div>-->
+
+      <div class="form-group col-4">
+        <label for="inputJobTargetId" class="">求职目标？ *</label>
+<!--        <input data-th-field="*{jobTarget}" name="jobTarget" type="text" id="inputJobTargetId" class="form-control" placeholder="jobTarget" required>-->
+        <select data-th-field="*{jobTarget}" class="form-control" id="inputJobTargetId" required>
+          <option value="0">请选择</option>
+          <option data-th-each="catalog : ${catalogs}" data-th-value="${catalog}" data-th-text="${catalog}"></option>
+        </select>
+      </div>
+      <div class="form-group col-4">
+        <label for="inputCountryId" class="">在哪一国求职？ *</label>
+<!--        <input name="country" type="text" id="inputCountryId" class="form-control" placeholder="country" required>-->
+        <select data-th-field="*{embeddedContact.country}" class="form-control" id="inputCountryId" required>
+          <option value="0">请选择</option>
+          <option data-th-each="country : ${countries}" data-th-value="${country}" data-th-text="${country}"></option>
+        </select>
+      </div>
+<!--      <div class="form-group col-4">-->
+<!--        <label for="inputStateId" class="">State</label>-->
+<!--        <input data-th-field="*{embeddedContact.state}" name="state" type="text" id="inputStateId" class="form-control" placeholder="state">-->
+<!--      </div>-->
+    </div>
+    <div class="row">
+      * 必填，其他选填。
+    </div>
+    <input name="submitButton" class="btn btn-lg btn-primary btn-block" type="submit" value="注册新账号"/>
+  </form>
+  <hr>
+  <p>已有账号？</p>
+  <a href="/login" class="btn btn-lg btn-primary btn-block">登 入</a>
+</main>
+
+<!--<footer data-layout-fragment="footer" hidden>-->
+<!--</footer>-->
+
+<!--  Begin of plugin-->
+<div data-layout-fragment="plugin">
+  <script data-th-src="@{https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js}" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js"></script>
+</div>
+<script data-layout-fragment="script">
+  function setFormValidation(id) {
+    $(id).validate({
+      highlight: function(element) {
+        $(element).closest('.form-group').removeClass('has-success').addClass('has-danger');
+        $(element).closest('.form-check').removeClass('has-success').addClass('has-danger');
+      },
+      success: function(element) {
+        $(element).closest('.form-group').removeClass('has-danger').addClass('has-success');
+        $(element).closest('.form-check').removeClass('has-danger').addClass('has-success');
+      },
+      errorPlacement: function(error, element) {
+        $(element).closest('.form-group').append(error);
+      },
+    });
+  }
+  async function checkForm(form) { // Submit button clicked and disabled
+    form.submitButton.disabled = true;
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    form.submitButton.disabled = false;
+    return true;
+  }
+
+  $(document).ready(function() {
+    setFormValidation('#EditingValidation');
+  });
+</script>
+</body>
+
+</html>

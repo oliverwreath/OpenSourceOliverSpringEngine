@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html data-layout-decorate="~{admin/layouts/admin_layout.html}" lang="en">
+
+<head>
+  <title>Show Courses</title>
+  <link rel="stylesheet" href="https://unpkg.com/ag-grid-community@20.2.0/dist/styles/ag-grid.css">
+  <link rel="stylesheet" href="https://unpkg.com/ag-grid-community@20.2.0/dist/styles/ag-theme-material.css">
+  <link rel="stylesheet" data-th-href="@{/static/data-grid.css}" href="/static/data-grid.css">
+</head>
+
+<body>
+<div data-layout-fragment="content" class="content">
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Courses</h4>
+    </div>
+    <div class="card-body">
+      <div class="toolbar">
+        <button class="btn btn-warning btn-sm animation-on-hover" onclick="onAddRow()">+ 添加新条目（双击编辑）</button>
+        <button class="btn btn-warning btn-sm animation-on-hover" onclick="onRemoveSelected(deleteOne)">X 删除所选的条目们</button>
+        <br>
+        <h6>显示/ 隐藏各列： </h6>
+        <div class="form-check form-check-inline">
+          <label class="form-check-label text-capitalize">
+            <input class="form-check-input" type="checkbox" onchange="onToggleVisible('id', this.checked)"/>
+            <span class="form-check-sign"></span>
+            Id
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <label class="form-check-label text-capitalize">
+            <input class="form-check-input" checked type="checkbox" onchange="onToggleVisible('catalog', this.checked)"/>
+            <span class="form-check-sign"></span>
+            Catalog
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <label class="form-check-label text-capitalize">
+            <input class="form-check-input" checked type="checkbox" onchange="onToggleVisible('courseName', this.checked)"/>
+            <span class="form-check-sign"></span>
+            CourseName
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <label class="form-check-label text-capitalize">
+            <input class="form-check-input" checked type="checkbox" onchange="onToggleVisible('coursePrice', this.checked)"/>
+            <span class="form-check-sign"></span>
+            CoursePrice
+          </label>
+        </div>
+      </div>
+
+      <div id="myGrid" style="height: 600px;" class="ag-theme-material"></div>
+    </div>
+  </div>
+</div>
+<div data-layout-fragment="plugin">
+  <script type="text/javascript" src="https://unpkg.com/ag-grid-community@20.2.0/dist/ag-grid-community.min.noStyle.js"></script>
+  <script type="text/javascript" data-th-src="@{/static/ag_grid_common.js?v=1.0.0.0.0.0.0.0.7}" src="/static/ag_grid_common.js"></script>
+</div>
+
+<script data-layout-fragment="script">
+  const getAll = '/api/courses/all';
+  const deleteOne = '/api/courses/';
+  const put2Replace = '/api/courses/';
+  const post2Create = '/api/courses/';
+
+  const columnDefs = [
+    {headerName: "Id", field: "id", type: 'textColumn', editable: false, hide: true},
+    {headerName: "Catalog", field: "catalog", type: 'dropDownColumn', checkboxSelection: true,
+      cellClassRules: {
+        'rag-green': function(params) { return params.value === '四大_BIG4'},
+        'rag-amber': function(params) { return params.value === '咨询_CONSULTING'},
+        'rag-pink': function(params) { return params.value === '大数据_BIG_DATA'},
+        'rag-yellow': function(params) { return params.value === 'FLAG'},
+        'rag-blue': function(params) { return params.value === '金融_FINANCE'},
+        'rag-red': function(params) { return params.value === '快消_CPG'},
+      },
+      cellEditorParams: {
+        values: catalogs,
+        cellRenderer: (params) => params.value.name
+      }},
+    {headerName: "CourseName", field: "courseName", type: 'textColumn'},
+    {headerName: "CoursePrice", field: "coursePrice", type: 'numberColumn'},
+    // {headerName: "DueDate", field: "dueDate", type: 'dateColumn'},
+    // {headerName: "Priority", field: "priority", type: 'dropDownColumn',
+    //   cellClassRules: {
+    //     'rag-green': function(params) { return params.value === 'Normal'},
+    //     'rag-amber': function(params) { return params.value === 'High'},
+    //     'rag-red': function(params) { return params.value === 'Urgent'},
+    //   },
+    //   cellEditorParams: {
+    //     values: priorities,
+    //     cellRenderer: (params) => params.value.name
+    //   }}
+  ];
+
+  // let the grid know which columns and what data to use
+  const gridOptions = {
+    // PROPERTIES - object properties
+    columnDefs: columnDefs,
+    defaultColDef: defaultColDef,
+    columnTypes: columnTypes,
+    // rowData: rowData,
+
+    // PROPERTIES - simple boolean / string / number properties
+    pagination: true,
+    rowSelection: 'multiple',
+    floatingFilter: true,
+    animateRows: true,
+    paginationAutoPageSize:true,
+    editType: 'fullRow',
+
+    // EVENTS - add event callback handlers
+    onRowClicked: function(event) { console.log('a row was clicked'); },
+    onColumnResized: function(event) {
+      console.log('a column was resized');
+    },
+    onGridReady: function(event) {
+      console.log('the grid is now ready');
+      event.api.sizeColumnsToFit();
+    },
+    onGridSizeChanged: function(event) {
+      console.log('the grid size changed!');
+      event.api.sizeColumnsToFit();
+    },
+    onRowValueChanged: onRowValueChangedFunction,
+    onCellValueChanged: function(event) {
+      console.log('onCellValueChanged fired!');
+    },
+  };
+
+  // setup the grid after the page has finished loading
+  document.addEventListener('DOMContentLoaded', initialGET(getAll));
+
+  $(document).ready(function () {
+  });
+</script>
+</body>
+
+</html>
+

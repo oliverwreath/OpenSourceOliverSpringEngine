@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html data-layout-decorate="~{layouts/default_layout.html}" lang="en">
+
+<head>
+  <title>Index</title>
+
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="841802735849-r150jdbrvnm5i8pn1bbgd2014dpot3q6.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body class="d-flex flex-column h-100">
+
+<!--<header data-layout-fragment="header" hidden>-->
+<!--</header>-->
+
+<main data-layout-fragment="content" class="container">
+  <h1>Classroom</h1>
+
+  <div id="signInId" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+  <a id="signOutId" href="#" onclick="signOut();">Sign out</a>
+  <script>
+    showSidebarMessage('欢迎游客!');
+
+    var auth2; // The Sign-In object.
+    var googleUser; // The current user.
+
+    /**
+     * Calls startAuth after Sign in V2 finishes setting up.
+     */
+    var appStart = function() {
+      gapi.load('auth2', initSigninV2);
+    };
+
+    function onSignIn(googleUser) {
+      $("#signInId").hide();
+
+      // Useful data for your client-side scripts:
+      const profile = googleUser.getBasicProfile();
+
+      console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+      console.log('Full Name: ' + profile.getName());
+      console.log('Given Name: ' + profile.getGivenName());
+      console.log('Family Name: ' + profile.getFamilyName());
+      console.log("Image URL: " + profile.getImageUrl());
+      console.log("Email: " + profile.getEmail());
+      showSidebarMessage('欢迎' + profile.getGivenName() + '!');
+      showSidebarMessage('你的email是' + profile.getEmail() + '!');
+
+      // The ID token you need to pass to your backend:
+      var id_token = googleUser.getAuthResponse().id_token;
+      console.log("ID Token: " + id_token);
+
+      $("#signOutId").show();
+    }
+
+    function signOut() {
+      $("#signOutId").hide();
+
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+
+      showSidebarMessage('您已退出登录!');
+      $("#signInId").show();
+    }
+
+    $(document).ready(function () {
+
+    });
+  </script>
+
+<!--  temporary demo for paypal-->
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="PVVBURUSYTD8Y">
+    <table>
+      <tr><td><input type="hidden" name="on0" value="Sizes">Sizes</td></tr><tr><td><select name="os0">
+      <option value="Option 1">Option 1 $1.00 CAD</option>
+      <option value="Option 2">Option 2 $3.00 CAD</option>
+      <option value="Option 3">Option 3 $5.00 CAD</option>
+    </select> </td></tr>
+      <tr><td><input type="hidden" name="on1" value="&#32473;&#23567;&#20108;&#30340;&#22791;&#27880;">&#32473;&#23567;&#20108;&#30340;&#22791;&#27880;</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
+    </table>
+    <input type="hidden" name="currency_code" value="CAD">
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+  </form>
+
+  <video width="400" controls>
+    <source src="../static/mov_bbb.mp4" type="video/mp4">
+<!--    <source src="mov_bbb.ogg" type="video/ogg">-->
+    Your browser does not support HTML5 video.
+  </video>
+</main>
+
+<!--<footer data-layout-fragment="footer" hidden>-->
+<!--</footer>-->
+
+<!--  Begin of plugin-->
+<div data-layout-fragment="plugin">
+</div>
+<script data-layout-fragment="script">
+</script>
+</body>
+
+</html>
