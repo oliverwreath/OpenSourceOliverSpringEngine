@@ -2,7 +2,7 @@
 * Welcome! 
 * I always dream of a Universal Spring Boot Engine to kick-start projects. 
 * lets you focus on the money-making business logic.  
-* with a default PayPal payment button and user login infrastructure from day 1. 
+* with RESTful APIs, a PayPal payment button and user login infrastructure from day 1. 
 
 # Versions
 * Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
@@ -10,15 +10,18 @@
 * Hibernate Core {5.3.7.Final}
 * org.hibernate.dialect.MySQL57Dialect
 
-# Benefits of this engine
-* Supporting 100 * Efficient JCache + EhCache out of the box! 
-* Supporting PalPal Button out of the box!  
-* Supporting Spring Login Audit out of the box!  
-* Supporting Spring Security FormLogin out of the box!  
-* Supporting login with Google out of the box!  
-* Crazy handy data grid integration with RESTful as well as their unit-test out of the box!  
-* Support Scheduler to synchronize denormalize informations every 10 mins or so. Also use cron to cleanup excessive audit data 3 a.m. everyday. 
-* Supports internationalization by default! CREATE DATABASE Mydb_Name CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+# Benefits of this engine - out of the box! 
+* RESTful APIs. 
+* Highest quality TDD tests. 
+* Efficient Cache. 
+* Accept payments with PayPal button.
+* FormLogin and Log in with Google/ Github. 
+* Login Audit. 
+* Reports and Anylytics. 
+* Crazy handy data grid interaction. 
+* Scheduler to synchronize denormalize informations every 10 mins or so. 
+* Cron to cleanup excessive audit data 3 a.m. everyday. 
+* utf8mb4 internationalization! 
 
 # Quick Configurations 
 * 1 rename src/main/resources/application-dev.properties.bak TO application-dev.properties
