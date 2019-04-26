@@ -10,6 +10,7 @@
 * Supporting Spring Login Audit out of the box!  
 * Supporting Spring Security FormLogin out of the box!  
 * Supporting login with Google out of the box!  
+* Crazy handy data grid integration with RESTful as well as their unit-test out of the box!  
 
 # Quick Configurations: 
 * 1 rename src/main/resources/application-dev.properties.bak TO application-dev.properties
