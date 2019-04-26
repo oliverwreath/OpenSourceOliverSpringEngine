@@ -50,3 +50,6 @@ oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_HOSTNAME
 # Quick Start and take it for a spin
 ![Quick_Start](https://github.com/oliverwreath/OpenSourceOliverSpringEngine/blob/master/src/main/resources/static/ReadmePictures/Quick_Start.png?raw=true)
 
+# Features In a Glance
+![i18n_Localization](https://github.com/oliverwreath/OpenSourceOliverSpringEngine/blob/master/src/main/resources/static/ReadmePictures/i18n.JPG?raw=true
+)
