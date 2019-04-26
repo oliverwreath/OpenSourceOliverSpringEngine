@@ -20,10 +20,10 @@ public class MvcConfig implements WebMvcConfigurer {
 
     public void addViewControllers(ViewControllerRegistry registry) {
         // landing
-        registry.addRedirectViewController("/","/public/classroom");
-        registry.addRedirectViewController("/landing","/public/classroom");
-        registry.addRedirectViewController("/index","/public/classroom");
-        registry.addRedirectViewController("/home","/public/classroom");
+        registry.addRedirectViewController("/","/public/index");
+        registry.addRedirectViewController("/landing","/public/index");
+        registry.addRedirectViewController("/index","/public/index");
+        registry.addRedirectViewController("/home","/public/index");
         // Other pages
         registry.addRedirectViewController("/public/","/public/index.html");
         registry.addRedirectViewController("/public/index","/public/index.html");
@@ -32,8 +32,6 @@ public class MvcConfig implements WebMvcConfigurer {
         registry.addRedirectViewController("/public/joinus","/public/joinus.html");
         registry.addRedirectViewController("/public/aboutus","/public/aboutus.html");
         registry.addRedirectViewController("/public/resume-check","/public/resume-check.html");
-        // Classroom
-//        registry.addRedirectViewController("/public/classroom","/classroom");
         // login/Register
         registry.addViewController("/login").setViewName("LoginRegister/login");
 //        registry.addViewController("/register").setViewName("LoginRegister/register");
