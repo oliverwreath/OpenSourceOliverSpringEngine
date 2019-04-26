@@ -23,9 +23,9 @@
 <body class="d-flex flex-column h-100" style="background-color: #f5f5f5;">
 
 <!-- #1 Begin page header -->
-<header data-layout-fragment="header" class="">
+<header data-layout-fragment="header" class="bg-dark">
   <!-- Fixed navbar -->
-<!--  <div class="h-100" style="background-color: #6CA3E8;">-->
+<!--  <div class="h-100 bg-dark">-->
 <!--    <div class="container h-100" style="background-color: #4189E1;">-->
 <!--      <div class="h-75 d-flex align-items-end text-white">-->
 <!--        <img class="mb-4" src="../static/logo.svg" alt="logo" width="62" height="40">-->
@@ -64,7 +64,7 @@
 <!--              <a class="nav-link" href="../public/aboutus.html">关于我们</a>-->
 <!--            </li>-->
             <li class="nav-item">
-              <a class="nav-link" data-sec-authorize="isAnonymous()" href="/login">Login</a>
+              <a data-th-text="#{text.login}" class="nav-link" data-sec-authorize="isAnonymous()" href="/login"></a>
 <!--              <form data-sec-authorize="isAuthenticated()" data-th-action="@{/perform_logout}" method="post">-->
 <!--                <input class="btn btn-link nav-link" type="submit" value="logout" data-sec-authentication="name"/>-->
 <!--              </form>-->
@@ -74,7 +74,7 @@
               <a data-sec-authorize="isAuthenticated()" class="nav-link" onclick="document.forms['logoutForm'].submit()">Welcome [[${#httpServletRequest.remoteUser}]] Logout</a>
             </li>
             <li class="nav-item" data-sec-authorize="isAnonymous()">
-              <a class="nav-link" href="/register">Join For Free</a>
+              <a data-th-text="#{text.join_for_free}" class="nav-link" href="/register"></a>
             </li>
             <li class="nav-item" data-sec-authorize="hasAnyRole('ADMIN', 'DEVELOPER')">
               <a class="nav-link" href="../admin/index" data-th-text="#{text.admin_portal}"></a>
