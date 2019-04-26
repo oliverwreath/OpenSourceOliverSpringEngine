@@ -30,3 +30,4 @@ oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_HOSTNAME
 * 2 Then You should see something like this. 
 ![All Test Passed](https://github.com/oliverwreath/OpenSourceOliverSpringEngine/blob/master/src/main/resources/static/ReadmePictures/Tests_All_Passed.png?raw=true)
 
+# Quick Start and take it for a spin
