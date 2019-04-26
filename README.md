@@ -5,9 +5,9 @@ Welcome! I always dream of a Spring Boot Engine to kick-start projects since the
 # Quick configurations: 
 db configs in file - src/main/resources/application-dev.properties.bak
 
-# 1rename application-dev.properties.bak 2 application-dev.properties
+* 1rename application-dev.properties.bak 2 application-dev.properties
 
-# 2Then change the following: 
+* 2Then change the following: 
 spring.datasource.username=YOUR_DB_INSTANCE_USERNAME
 spring.datasource.password=YOUR_DB_INSTANCE_PASSWORD
 oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_HOSTNAME
