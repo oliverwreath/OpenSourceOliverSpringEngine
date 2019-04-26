@@ -9,6 +9,7 @@
 * 1 rename src/main/resources/application-dev.properties.bak TO application-dev.properties
 
 * 2 Then change the following: 
+
 spring.datasource.username=YOUR_DB_INSTANCE_USERNAME
 spring.datasource.password=YOUR_DB_INSTANCE_PASSWORD
 oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_HOSTNAME
