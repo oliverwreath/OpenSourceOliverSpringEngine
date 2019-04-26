@@ -1,4 +1,5 @@
-# OliverSpringEngine
+# Oliver Spring Engine -  KickStart your project in 10 mins
+* lets you focus on the money-making business logic with a default payment button and user login infrastructure from day 1. 
 
 Welcome! I always dream of a Spring Boot Engine to kick-start projects since they really share a lot of commons. 
 
