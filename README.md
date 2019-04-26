@@ -1,10 +1,12 @@
 # OliverSpringEngine
 
-Welcome! I always dream of a Spring Boot Engine to kick-start every
+Welcome! I always dream of a Spring Boot Engine to kick-start projects since they really share a lot of commons. 
 
 # Quick configurations: 
 db configs in file - src/main/resources/application-dev.properties.bak
+
 #1 rename application-dev.properties.bak 2 application-dev.properties
+
 #2 Then change the following: 
 spring.datasource.username=YOUR_DB_INSTANCE_USERNAME
 spring.datasource.password=YOUR_DB_INSTANCE_PASSWORD
