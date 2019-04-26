@@ -12,5 +12,5 @@ spring.datasource.username=YOUR_DB_INSTANCE_USERNAME
 spring.datasource.password=YOUR_DB_INSTANCE_PASSWORD
 oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_HOSTNAME
 
-Then Run Your Tests right away to make sure everything adapts comfortably. 
+* Then Run Your Tests right away to make sure everything adapts comfortably. 
 ![Run Test](https://github.com/oliverwreath/OpenSourceOliverSpringEngine/blob/master/src/main/resources/static/ReadmePictures/Annotation%202019-04-25%20221012.png?raw=true)
