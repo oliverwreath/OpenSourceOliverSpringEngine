@@ -4,6 +4,12 @@
 * lets you focus on the money-making business logic.  
 * with a default PayPal payment button and user login infrastructure from day 1. 
 
+# Versions
+* Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+* jdk1.8.0_201
+* Hibernate Core {5.3.7.Final}
+* org.hibernate.dialect.MySQL57Dialect
+
 # Benefits of this engine
 * Supporting 100 * Efficient JCache + EhCache out of the box! 
 * Supporting PalPal Button out of the box!  
@@ -11,6 +17,7 @@
 * Supporting Spring Security FormLogin out of the box!  
 * Supporting login with Google out of the box!  
 * Crazy handy data grid integration with RESTful as well as their unit-test out of the box!  
+* Supports internationalization by default! CREATE DATABASE Mydb_Name CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 # Quick Configurations 
 * 1 rename src/main/resources/application-dev.properties.bak TO application-dev.properties
@@ -31,3 +38,4 @@ oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_HOSTNAME
 ![All Test Passed](https://github.com/oliverwreath/OpenSourceOliverSpringEngine/blob/master/src/main/resources/static/ReadmePictures/Tests_All_Passed.png?raw=true)
 
 # Quick Start and take it for a spin
+![Quick_Start](https://github.com/oliverwreath/OpenSourceOliverSpringEngine/blob/master/src/main/resources/static/ReadmePictures/Quick_Start.png?raw=true)
