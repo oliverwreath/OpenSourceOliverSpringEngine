@@ -14,30 +14,58 @@
 </header>
 
 <div data-layout-fragment="content" class="container form-signin">
-  <div data-th-if="${param.error}" data-th-text="${param.error}">
-  </div>
-  <div data-th-if="${param.logout}">
-    You have logged out.
-  </div>
-  <div data-th-if="${param.info}" data-th-text="${param.info}">
-  </div>
-  <form data-th-action="@{/login}" method="post">
-    <a href="../"><img class="mb-4" src="../static/logo.svg" alt="logo" width="62" height="40"></a>
-    <h1 class="h3 mb-3 font-weight-normal">请登录</h1>
-    <label for="username" class="sr-only">Email address</label>
-    <input name="username" type="text" id="username" class="form-control" placeholder="Email address" required autofocus>
-    <label for="password" class="sr-only">Password</label>
-    <input name="password" type="password" id="password" class="form-control" placeholder="Password" required>
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> 下次自动登录
-      </label>
+  <div class="row">
+    <div data-th-if="${param.error}" data-th-text="${param.error}">
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">登 录</button>
-  </form>
-  <hr>
-  <p>还没有账号？</p>
-  <a href="/register" class="btn btn-lg btn-primary btn-block">使用Email注册</a>
+    <div data-th-if="${param.logout}">
+      You have logged out.
+    </div>
+    <div data-th-if="${param.info}" data-th-text="${param.info}">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header">
+          请登录
+        </div>
+
+        <div class="card-body">
+          <a href="../"><img class="mb-4" src="../static/logo.svg" alt="logo" width="62" height="40"></a>
+<!--          <h3 class="card-title font-weight-normal">请登录</h3>-->
+          <form data-th-action="@{/login}" method="post">
+            <label for="username" class="sr-only">Email address</label>
+            <input name="username" type="text" id="username" class="form-control" placeholder="Email address" required autofocus>
+            <label for="password" class="sr-only">Password</label>
+            <input name="password" type="password" id="password" class="form-control" placeholder="Password" required>
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> 下次自动登录
+              </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">登 录</button>
+          </form>
+
+          <hr>
+          <p>还没有账号？</p>
+          <a href="/register" class="btn btn-lg btn-primary btn-block">使用Email注册</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header">
+          第三方登录
+        </div>
+
+        <div class="card-body">
+          <a href="../"><img class="mb-4" src="../static/logo.svg" alt="logo" width="62" height="40"></a>
+<!--          <h3 class="card-title mb-3 font-weight-normal">第三方登录</h3>-->
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!--<footer data-layout-fragment="footer" hidden>-->
