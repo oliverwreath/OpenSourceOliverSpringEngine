@@ -37,17 +37,12 @@
             <input name="username" type="text" id="username" class="form-control" placeholder="Email address" required autofocus>
             <label for="password" class="sr-only">Password</label>
             <input name="password" type="password" id="password" class="form-control" placeholder="Password" required>
-            <div class="checkbox mb-3">
-              <label>
-                <input type="checkbox" value="remember-me" data-th-text="#{text.signIn.rememberMe}">
-              </label>
-            </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" data-th-text="#{text.signIn.signIn}"></button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" data-th-text="#{text.signUp.signUp}"></button>
           </form>
 
           <hr>
-          <p data-th-text="#{text.signIn.notMemberYet}"></p>
-          <a href="/register" class="btn btn-lg btn-primary btn-block" data-th-text="#{text.signIn.registerWithEmail}"></a>
+          <p data-th-text="#{text.signUp.alreadyAMember}"></p>
+          <a href="/login" class="btn btn-lg btn-primary btn-block" data-th-text="#{text.signUp.go2Login}"></a>
         </div>
       </div>
     </div>
