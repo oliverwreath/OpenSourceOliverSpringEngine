@@ -16,7 +16,7 @@
 * Hibernate Core {5.3.7.Final}
 * org.hibernate.dialect.MySQL57Dialect
 
-# Benefits out of the box! 
+# Features out of the box! 
 * RESTful APIs. Optional Read: ag-Grid 101 — Material Design — RESTful https://link.medium.com/oS0E5fvXbW
 * Highest quality TDD tests. 
 * Efficient Cache. 
@@ -31,6 +31,7 @@
 * utf8mb4 internationalization! Optional Read: The utf8mb4 magic https://link.medium.com/FZxI5ZoXbW
 * @Enumerated(EnumType.STRING)
 * Auditing solution. @CreatedBy etc. 
+* Send SMTP gmail. 
 
 # Quick Configurations 
 * 1 rename src/main/resources/application-dev.properties.bak TO application-dev.properties
