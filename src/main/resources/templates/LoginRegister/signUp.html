@@ -32,11 +32,9 @@
         <div class="card-body">
           <a href="../"><img class="mb-4" src="../static/logo.svg" alt="logo" width="62" height="40"></a>
           <!--          <h3 class="card-title font-weight-normal">请登录</h3>-->
-          <form data-th-action="@{/signUp}" method="post">
+          <form data-th-action="@{/GetConfirmationCode}" method="post">
             <label for="username" class="sr-only">Email address</label>
             <input name="username" type="text" id="username" class="form-control" placeholder="Email address" required autofocus>
-            <label for="password" class="sr-only">Password</label>
-            <input name="password" type="password" id="password" class="form-control" placeholder="Password" required>
             <button class="btn btn-lg btn-primary btn-block" type="submit" data-th-text="#{text.signUp.signUp}"></button>
           </form>
 

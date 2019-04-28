@@ -22,6 +22,12 @@
 	</properties>
 
 	<dependencies>
+<!--		send email-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+
 		<!--Core Java Commons helper library-->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
