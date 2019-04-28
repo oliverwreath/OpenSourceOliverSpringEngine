@@ -121,7 +121,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .antMatchers("/admin/**").hasRole("ADMIN")
                     .antMatchers("/admins/**").hasRole("ADMIN")
                     .antMatchers("/payment/cancel", "/payment/success").permitAll()
-                    .antMatchers("/", "/login**", "/register**", "/register/members/", "/register/**", "/home", "/index", "/landing").permitAll()
+                    .antMatchers("/", "/login**", "/signup**", "/signup", "/register**", "/register/members/", "/register/**", "/home", "/index", "/landing").permitAll()
                     .antMatchers("/webjars/**", "/static/**", "/public/**", "/index", "/Index.html").permitAll()
                     .antMatchers("/users/**/verify/**", "/checkout").permitAll()
                     .antMatchers("/auth/**", "/oauth2/**").permitAll()
