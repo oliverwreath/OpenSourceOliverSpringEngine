@@ -26,8 +26,7 @@
   <div class="row">
     <div class="col-6">
       <div class="card">
-        <div class="card-header">
-          请登录
+        <div class="card-header" data-th-text="#{text.signIn.pleaseSignIn}">
         </div>
 
         <div class="card-body">
@@ -40,23 +39,22 @@
             <input name="password" type="password" id="password" class="form-control" placeholder="Password" required>
             <div class="checkbox mb-3">
               <label>
-                <input type="checkbox" value="remember-me"> 下次自动登录
+                <input type="checkbox" value="remember-me" data-th-text="#{text.signIn.rememberMe}">
               </label>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">登 录</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" data-th-text="#{text.signIn.signIn}"></button>
           </form>
 
           <hr>
-          <p>还没有账号？</p>
-          <a href="/register" class="btn btn-lg btn-primary btn-block">使用Email注册</a>
+          <p data-th-text="#{text.signIn.notMemberYet}"></p>
+          <a href="/register" class="btn btn-lg btn-primary btn-block" data-th-text="#{text.signIn.registerWithEmail}"></a>
         </div>
       </div>
     </div>
 
     <div class="col-6">
       <div class="card">
-        <div class="card-header">
-          第三方登录
+        <div class="card-header" data-th-text="#{text.signIn.3rdPartySignIn}">
         </div>
 
         <div class="card-body">
