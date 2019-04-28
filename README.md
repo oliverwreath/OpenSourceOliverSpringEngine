@@ -32,6 +32,7 @@
 * @Enumerated(EnumType.STRING)
 * Auditing solution. @CreatedBy etc. 
 * Send SMTP gmail. 
+* BootStrap Responsive Design. 
 
 # Quick Configurations 
 * 1 rename src/main/resources/application-dev.properties.bak TO application-dev.properties
