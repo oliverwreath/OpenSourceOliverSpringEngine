@@ -33,6 +33,7 @@
 * Auditing solution. @CreatedBy etc. 
 * Send SMTP gmail. 
 * BootStrap Responsive Design. 
+* Your favourite LomBok Integration! 
 
 # Quick Configurations 
 * 1 rename src/main/resources/application-dev.properties.bak TO application-dev.properties
