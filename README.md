@@ -16,24 +16,25 @@
 * Hibernate Core {5.3.7.Final}
 * org.hibernate.dialect.MySQL57Dialect
 
-# Features out of the box! 
+# Major Features 
+* BootStrap Responsive Design. 
 * RESTful APIs. Optional Read: ag-Grid 101 — Material Design — RESTful https://link.medium.com/oS0E5fvXbW
 * Highest quality TDD tests. 
 * Efficient Cache. 
-* Accept payments with PayPal button.
-* FormLogin and Log in with Google/ Github. 
-* Login Audit. 
+* Accept payments with PayPal button. 
+* FormLogin and 3rd party Log in with Google/ Github. 
 * Reports and Anylytics. 
 * Crazy handy data grid interaction. 
 * i18n Localization. 
 * Scheduling tasks. Optional Read: https://link.medium.com/5KDrJgC14V
-* Cron to cleanup excessive audit data 3 a.m. everyday. 
 * utf8mb4 internationalization! Optional Read: The utf8mb4 magic https://link.medium.com/FZxI5ZoXbW
-* @Enumerated(EnumType.STRING)
-* Auditing solution. @CreatedBy etc. 
+
+# Minor Features 
+* Login Audit + Edit Audit.  
 * Send SMTP gmail. 
-* BootStrap Responsive Design. 
 * Your favourite LomBok Integration! 
+* @Enumerated(EnumType.STRING)
+* Cron to cleanup excessive audit data 3 a.m. everyday. 
 
 # Quick Configurations 
 * 1 rename src/main/resources/application-dev.properties.bak TO application-dev.properties
