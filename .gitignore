@@ -32,7 +32,9 @@ HELP.md
 ### mvn Wrapper ###
 /mvnw.cmd
 /mvnw
+/src/main/resources/application.properties
 /src/main/resources/application-dev.properties
 /src/main/resources/application-prod.properties
+/src/main/resources/application.properties.bak
 /src/main/resources/application-dev.properties.bak
 /src/main/resources/application-prod.properties.bak
