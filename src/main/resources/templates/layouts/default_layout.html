@@ -74,7 +74,7 @@
               <a data-sec-authorize="isAuthenticated()" class="nav-link" onclick="document.forms['logoutForm'].submit()">Welcome [[${#httpServletRequest.remoteUser}]] Logout</a>
             </li>
             <li class="nav-item" data-sec-authorize="isAnonymous()">
-              <a data-th-text="#{text.join_for_free}" class="nav-link" href="/register"></a>
+              <a data-th-text="#{text.join_for_free}" class="nav-link" href="/signup"></a>
             </li>
             <li class="nav-item" data-sec-authorize="hasAnyRole('ADMIN', 'DEVELOPER')">
               <a class="nav-link" href="../admin/index" data-th-text="#{text.admin_portal}"></a>
