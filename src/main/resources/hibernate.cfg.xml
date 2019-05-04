@@ -7,7 +7,7 @@
         <!--<property name="connection.url">-->
             <!--jdbc:mysql://mysql-db-instance1.ckjydknkelkx.us-east-1.rds.amazonaws.com:3306/crm_clone-->
         <!--</property>-->
-        <!--<property name="connection.driver_class">com.mysql.jdbc.Driver</property>-->
+        <!--<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>-->
 <!--        <property name="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</property>-->
 <!--        <property name="hibernate.connection.CharSet">utf8mb4</property>-->
 <!--        <property name="hibernate.connection.characterEncoding">utf8</property>-->
