@@ -1,7 +1,7 @@
 # Logging Level
 logging.level.root=INFO
 logging.level.org.springframework.web=INFO
-logging.level.org.hibernate=DEBUG
+logging.level.org.hibernate=INFO
 logging.level.org.hibernate.stat=INFO
 logging.level.com.oli.bDataJpaTests=DEBUG
 logging.level.com.oli.Controller=DEBUG
@@ -9,19 +9,37 @@ logging.level.com.oli.*=DEBUG
 logging.level.com.oli.SecurityConfig=DEBUG
 logging.level.org.springframework.security=DEBUG
 
+# H2 Quick PoC
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2
+spring.h2.console.settings.trace=false
+spring.h2.console.settings.web-allow-others=false
+
 # DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
-spring.datasource.hikari.maximumPoolSize=8
-spring.datasource.url=jdbc:mysql://${oliver.jpa.properties.hibernate.hostname}/${spring.jpa.properties.hibernate.default_schema}?useUnicode=yes&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
-spring.datasource.username=spring_engine_user_test
-spring.datasource.password=YOUR_DB_INSTANCE_PASSWORD
+#spring.datasource.hikari.maximumPoolSize=8
+spring.datasource.url=jdbc:h2:file:~/testdb;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE;INIT=CREATE SCHEMA IF NOT EXISTS testdb\\;SET SCHEMA testdb
+spring.datasource.username=sa
+spring.datasource.password=
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.platform=h2
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
+spring.datasource.name=testdb
+
+spring.jpa.properties.javax.persistence.schema-generation.create-source=metadata
+spring.jpa.properties.javax.persistence.schema-generation.scripts.action=drop-and-create
+spring.jpa.properties.javax.persistence.schema-generation.scripts.drop-target=drop-h2.sql
+spring.jpa.properties.javax.persistence.schema-generation.scripts.create-target=create-h2.sql
 
 # JPA (JpaBaseConfiguration, HibernateJpaAutoConfiguration)
-oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_NAME.us-east-1.rds.amazonaws.com
-spring.jpa.properties.hibernate.default_schema=spring_engine_test
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=create
+spring.datasource.initialization-mode=always
+spring.jpa.properties.hibernate.default_schema=testdb
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.use_sql_comments=true
 spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.properties.hibernate.generate_statistics=true
-spring.jpa.hibernate.ddl-auto=create
-spring.jpa.show-sql=true
 
 # THYMELEAF (ThymeleafAutoConfiguration)
 spring.thymeleaf.cache=false
