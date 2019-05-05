@@ -49,17 +49,17 @@ public class User implements Emptiable {
     @EqualsAndHashCode.Exclude
     private EmbeddedAudits embeddedAudits = new EmbeddedAudits();
 
-    @JsonBackReference(value = "admin")
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "user")
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    private Admin admin;
+//    @JsonBackReference(value = "admin")
+//    @OneToOne(fetch = FetchType.LAZY, mappedBy = "user")
+//    @ToString.Exclude
+//    @EqualsAndHashCode.Exclude
+//    private Admin admin;
 
-    @JsonBackReference(value = "member")
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "user")
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    private Member member;
+//    @JsonBackReference(value = "member")
+//    @OneToOne(fetch = FetchType.LAZY, mappedBy = "user")
+//    @ToString.Exclude
+//    @EqualsAndHashCode.Exclude
+//    private Member member;
 
     public User(String userEmail) {
         this.userEmail = userEmail;

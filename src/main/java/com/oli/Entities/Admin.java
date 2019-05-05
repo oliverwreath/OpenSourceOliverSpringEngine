@@ -36,7 +36,6 @@ public class Admin implements Emptiable {
     private Long id;
 //    @Basic
 //    private Long userId;
-    @JsonManagedReference(value = "admin")
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "user_id")
 //    @ToString.Exclude

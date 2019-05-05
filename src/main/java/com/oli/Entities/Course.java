@@ -42,10 +42,10 @@ public class Course implements Emptiable {
     @Basic
     @Column(precision = 13, scale = 5)
     private BigDecimal coursePrice;
-    @JsonManagedReference("Course->Video")
-    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true, mappedBy = "course")
-    @EqualsAndHashCode.Exclude
-    private List<Video> videos;
+//    @JsonManagedReference("Course->Video")
+//    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true, mappedBy = "course")
+//    @EqualsAndHashCode.Exclude
+//    private List<Video> videos;
     @Embedded
     @EqualsAndHashCode.Exclude
     private EmbeddedStats embeddedStats;

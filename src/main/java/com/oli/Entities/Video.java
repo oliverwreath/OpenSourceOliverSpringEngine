@@ -40,7 +40,6 @@ public class Video implements Emptiable {
     private EnumsUtils.Catalog catalog;
 //    @Basic
 //    private String course;
-    @JsonBackReference("Course->Video")
     @ManyToOne()
     @JoinColumn(name = "course_id")
     @EqualsAndHashCode.Exclude
