@@ -36,11 +36,14 @@
 * @Enumerated(EnumType.STRING)
 * Cron to cleanup excessive audit data 3 a.m. everyday. 
 
-# Quick Configurations 
-* 1 rename src/main/resources/application-dev.properties.bak TO application-dev.properties
+# Kick Start with Quick Configurations 
+* 1 rename src/main/resources/*.properties.bak TO application-dev.properties
 
-* 2 Then change the following: 
+* 2 For the sake of ease of use - simply run the dev environment - it has built-in embedded db that JUST WORKS! - like, magically! 
+![Run All Test](https://raw.githubusercontent.com/oliverwreath/OpenSourceOliverSpringEngine/08c13116f7d63fdf1fd591a8e80cef575ac051e4/src/main/resources/static/ReadmePictures/KickStart.JPG)
+Just tell Spring to use the JVM options (-Dspring.profiles.active=dev) as shown in the picture. 
 
+* 3 [Optional]for test environment - change the following: 
 spring.datasource.username=YOUR_DB_INSTANCE_USERNAME
 spring.datasource.password=YOUR_DB_INSTANCE_PASSWORD
 oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_HOSTNAME
@@ -54,7 +57,7 @@ oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_HOSTNAME
 * 2 Then You should see something like this. 
 ![All Test Passed](https://github.com/oliverwreath/OpenSourceOliverSpringEngine/blob/master/src/main/resources/static/ReadmePictures/Tests_All_Passed.png?raw=true)
 
-# Quick Start and take it for a spin
+# Spin it up! 
 ![Quick_Start](https://github.com/oliverwreath/OpenSourceOliverSpringEngine/blob/master/src/main/resources/static/ReadmePictures/Quick_Start.png?raw=true)
 
 # Features In a Glance
