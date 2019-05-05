@@ -24,3 +24,5 @@ INSERT INTO members (name, is_vip, user_id, country, gender, school, major, job_
 INSERT INTO members (name, is_vip, user_id, country, gender, job_target) VALUES ('Jack_example',  0, 3, 'Canada', 'MALE', '四大_BIG4'),('Jack_example',  0, 4, 'Canada', 'MALE', '咨询_CONSULTING'),('Jack_example',  0, 5, 'Canada', 'MALE', '大数据_BIG_DATA'),('Jack_example',  0, 6, 'Canada', 'MALE', 'FLAG'),('Jack_example',  0, 7, 'Canada', 'MALE', '金融_FINANCE'),('Jack_example',  0, 8, 'Canada', 'MALE', '快消_CPG');
 -- Video
 INSERT INTO videos (catalog, video_name) VALUES ('FLAG', 'example_video');
+
+--
