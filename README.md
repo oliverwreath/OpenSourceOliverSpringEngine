@@ -6,7 +6,7 @@
 * Then optionally switch to profile prod with MySQL, mvn clean, mvn test, mvn package and deploy, Viola! 
 * Lets you focus on the money-making business logic. 
 * Rich optional features. Including User entity, RESTful APIs, beautiful CRUD ag-grid and optional PayPal checkout button. 
-* Like the Spring Boot slogan - Build any thing! But this time! Build it fast and easy! 
+* Like the Spring Boot slogan - Build any thing! But this time - build it fast and easy! 
 
 # Preview
 * Beautiful RESTful ag-grid Integration Seemlessly
