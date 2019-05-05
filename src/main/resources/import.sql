@@ -1,16 +1,16 @@
 
 -- Alter
-# ALTER DATABASE spring_engine_test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-#
-# ALTER TABLE admins CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-# ALTER TABLE authorities CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-# ALTER TABLE courses CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-# ALTER TABLE drop_down_list_entities CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-# ALTER TABLE members CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-# ALTER TABLE order_courses CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-# ALTER TABLE order_videos CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-# ALTER TABLE users CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-# ALTER TABLE videos CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- ALTER DATABASE spring_engine_test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+--
+-- ALTER TABLE admins CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- ALTER TABLE authorities CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- ALTER TABLE courses CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- ALTER TABLE drop_down_list_entities CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- ALTER TABLE members CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- ALTER TABLE order_courses CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- ALTER TABLE order_videos CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- ALTER TABLE users CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- ALTER TABLE videos CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- country + catalog
 INSERT INTO drop_down_list_entities (id, my_values) VALUES ('COUNTRY', 'USA, Canada, Australia, New_Zealand, China, Japan, Korea, UK, Germany, Switzerland, France, Spain, Italy, Other_EuropeAmerica, Other_AsiaPacific, Other'),('CATALOG', '四大_BIG4, 咨询_CONSULTING, 大数据_BIG_DATA, FLAG, 金融_FINANCE, 快消_CPG');
