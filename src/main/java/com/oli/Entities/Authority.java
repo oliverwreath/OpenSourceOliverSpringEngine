@@ -34,11 +34,11 @@ public class Authority implements Emptiable {
 //    @Column(name = "user_id")
 //    private Long userId;
 //    @JsonBackReference(value = "user")
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "user_id")
-//    @ToString.Exclude
-//    @EqualsAndHashCode.Exclude
-//    private User user;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    private User user;
     @Embedded
     @EqualsAndHashCode.Exclude
     private EmbeddedAudits embeddedAudits = new EmbeddedAudits();

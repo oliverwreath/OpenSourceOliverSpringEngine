@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 /**
  * Author: Oliver
  */
@@ -13,11 +15,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService extends ServiceAbstract<User, Long> {
     private final UserRepository repository;
-    private final AuthorityService authorityService;
 
-    public UserService(UserRepository repository, AuthorityService authorityService) {
+    public UserService(UserRepository repository) {
         this.repository = repository;
-        this.authorityService = authorityService;
     }
 
     @Override
@@ -32,14 +32,14 @@ public class UserService extends ServiceAbstract<User, Long> {
 
     @Override
     public User saveOrReplace(User entity) {
-//        if (entity.getAuthorities() != null && !entity.getAuthorities().isEmpty()) {
-//            for (Authority authority : entity.getAuthorities()) {
-////                authority.setUser(entity);
-//                if (authority.getId() == null) {
-//                    authority.setId(authorityService.saveOrReplace(authority).getId());
-//                }
-//            }
-//        }
         return super.saveOrReplace(entity);
+    }
+
+    public Optional<User> findByEmail(String email) {
+        return repository.findByUserEmailEquals(email);
+    }
+
+    public boolean existsByEmail(String email) {
+        return repository.existsByUserEmailEquals(email);
     }
 }

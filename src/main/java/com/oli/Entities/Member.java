@@ -70,6 +70,11 @@ public class Member implements Emptiable {
     @EqualsAndHashCode.Exclude
     private EmbeddedAudits embeddedAudits = new EmbeddedAudits();
 
+    public Member(User user, String name) {
+        this.user = user;
+        this.name = name;
+    }
+
     public Member(final EnumsUtils.Catalog jobTarget) {
         this.jobTarget = jobTarget;
     }
