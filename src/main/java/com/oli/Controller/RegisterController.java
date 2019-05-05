@@ -63,6 +63,9 @@ public class RegisterController {
         log.debug("userName = {}; password = {}", userName, password);
 
         // Create a user with enabled false
+        if (userService.existsByEmail(userName)) {
+            return REDIRECT_PREFIX + "/login?error=Ouch! The email is already taken?! Try login?";
+        }
         final UUID token = UUID.randomUUID();
         User user = new User(userName, passwordEncoder().encode(password), token);
         Member member = new Member(user, userName);

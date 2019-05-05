@@ -19,4 +19,6 @@ public interface UserRepository extends PagingAndSortingRepository<User, Long> {
     long countByEmbeddedAudits_CreatedBy(String user);
 
     Optional<User> findByUserEmailEquals(String email);
+
+    boolean existsByUserEmailEquals(String email);
 }
