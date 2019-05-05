@@ -37,7 +37,7 @@
 * Cron to cleanup excessive audit data 3 a.m. everyday. 
 
 # Kick Start with Quick Configurations 
-* 1 rename src/main/resources/*.properties.bak TO application-dev.properties
+* 1 rename src/main/resources/*.properties.bak TO *.properties
 
 * 2 For the sake of ease of use - simply run the dev environment - it has built-in embedded db that JUST WORKS! - like, magically! 
 ![Run All Test](https://raw.githubusercontent.com/oliverwreath/OpenSourceOliverSpringEngine/08c13116f7d63fdf1fd591a8e80cef575ac051e4/src/main/resources/static/ReadmePictures/KickStart.JPG)
