@@ -25,4 +25,4 @@ INSERT INTO members (name, is_vip, user_id, country, gender, job_target) VALUES 
 -- Video
 INSERT INTO videos (catalog, video_name) VALUES ('FLAG', 'example_video');
 
---
+
