@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 /**
  * Author: Oliver
  */
@@ -41,5 +43,9 @@ public class UserService extends ServiceAbstract<User, Long> {
 //            }
 //        }
         return super.saveOrReplace(entity);
+    }
+
+    public Optional<User> findByEmail(String email) {
+        return repository.findByUserEmailEquals(email);
     }
 }

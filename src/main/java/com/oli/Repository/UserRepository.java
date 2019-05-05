@@ -4,6 +4,8 @@ import com.oli.Entities.User;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 /**
  * Author: Oliver
  */
@@ -15,4 +17,6 @@ public interface UserRepository extends PagingAndSortingRepository<User, Long> {
      * @return
      */
     long countByEmbeddedAudits_CreatedBy(String user);
+
+    Optional<User> findByUserEmailEquals(String email);
 }
