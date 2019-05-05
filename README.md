@@ -1,9 +1,12 @@
 # Oliver Spring Engine -  KickStart your project in 10 mins
 * Welcome! 
-* Why the project? I always dream of a Universal Spring Boot Engine to kick-start projects. 
-* lets you focus on the money-making business logic.  
-* with RESTful APIs, a PayPal payment button and user login infrastructure from day 1. 
-* EASY to use - simply run the dev environment - it SIMPLY WORKS! I put in an embedded h2 and tested, so you don't have to! 
+* Why the project? No Java Developer love building same authentication over and over again. 
+* Open Source Oliver Spring Engine to the rescue! 
+* EASY to use - 10 mins and you have user login in place. With blazingly fast h2 memory db for fast PoC (Proof of Concept). 
+* Then optionally switch to profile prod with MySQL, mvn clean, mvn test, mvn package and deploy, Viola! 
+* Lets you focus on the money-making business logic. 
+* Rich optional features. Including User entity, RESTful APIs, beautiful CRUD ag-grid and optional PayPal checkout button. 
+* Like the Spring Boot slogan - Build any thing! But this time! Build it fast and easy! 
 
 # Preview
 * Beautiful RESTful ag-grid Integration Seemlessly
