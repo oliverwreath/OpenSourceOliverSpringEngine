@@ -5,7 +5,8 @@
   <title>Index</title>
 
   <meta name="google-signin-scope" content="profile email">
-  <meta name="google-signin-client_id" content="841802735849-r150jdbrvnm5i8pn1bbgd2014dpot3q6.apps.googleusercontent.com">
+  <meta name="google-signin-client_id"
+        content="841802735849-r150jdbrvnm5i8pn1bbgd2014dpot3q6.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
@@ -19,72 +20,24 @@
 
   <ul>
     <li>For running the application: <br>
-      Please change under src/main/resources/**.properties.bak back 2 /**.properties</li>
+      Please change under src/main/resources/**.properties.bak back 2 /**.properties
+    </li>
     <li>For Google Sign-in activation: <br>
       Please fill in your Google_CLIENT_ID: <br>
       &lt;meta name=&quot;google-signin-client_id&quot; content=&quot;YOUR_CLIENT_ID.apps.googleusercontent.com&quot;&gt;<br>
       You can get one from <a href="https://developers.google.com/identity/sign-in/web/">here</a></li>
     <li>For Accepting PayPal payments: <br>
-      You can sign-up and get a button from <a href="https://www.paypal.com/ca/webapps/mpp/paypal-payments-standard">here</a></li>
+      You can sign-up and get a button from <a href="https://www.paypal.com/ca/webapps/mpp/paypal-payments-standard">here</a>
+    </li>
   </ul>
-  <div id="signInId" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-  <a id="signOutId" href="#" onclick="signOut();">Sign out</a>
-  <script>
-    showSidebarMessage('欢迎游客!');
-
-    var auth2; // The Sign-In object.
-    var googleUser; // The current user.
-
-    /**
-     * Calls startAuth after Sign in V2 finishes setting up.
-     */
-    var appStart = function() {
-      gapi.load('auth2', initSigninV2);
-    };
-
-    function onSignIn(googleUser) {
-      $("#signInId").hide();
-
-      // Useful data for your client-side scripts:
-      const profile = googleUser.getBasicProfile();
-
-      console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-      console.log('Full Name: ' + profile.getName());
-      console.log('Given Name: ' + profile.getGivenName());
-      console.log('Family Name: ' + profile.getFamilyName());
-      console.log("Image URL: " + profile.getImageUrl());
-      console.log("Email: " + profile.getEmail());
-      showSidebarMessage('欢迎' + profile.getGivenName() + '!');
-      showSidebarMessage('你的email是' + profile.getEmail() + '!');
-
-      // The ID token you need to pass to your backend:
-      var id_token = googleUser.getAuthResponse().id_token;
-      console.log("ID Token: " + id_token);
-
-      $("#signOutId").show();
-    }
-
-    function signOut() {
-      $("#signOutId").hide();
-
-      var auth2 = gapi.auth2.getAuthInstance();
-      auth2.signOut().then(function () {
-        console.log('User signed out.');
-      });
-
-      showSidebarMessage('您已退出登录!');
-      $("#signInId").show();
-    }
-
-    $(document).ready(function () {
-
-    });
-  </script>
+  <div id="signInId" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" type="hidden"></div>
+  <a id="signOutId" href="#" onclick="signOut();" type="hidden">Sign out</a>
 
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
     <input type="hidden" name="cmd" value="_s-xclick">
     <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID">
-    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+           alt="PayPal - The safer, easier way to pay online!">
     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
   </form>
 
@@ -102,6 +55,66 @@
 <div data-layout-fragment="plugin">
 </div>
 <script data-layout-fragment="script">
+  let auth2; // The Sign-In object.
+  let googleUser; // The current user.
+  let profile;
+
+  /**
+   * Calls startAuth after Sign in V2 finishes setting up.
+   */
+  const appStart = function() {
+    gapi.load('auth2', initSigninV2);
+  };
+
+  function onSignIn(googleUser) {
+    $("#signInId").hide();
+
+    // Useful data for your client-side scripts:
+    profile = googleUser.getBasicProfile();
+
+    console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+    console.log('Full Name: ' + profile.getName());
+    console.log('Given Name: ' + profile.getGivenName());
+    console.log('Family Name: ' + profile.getFamilyName());
+    console.log("Image URL: " + profile.getImageUrl());
+    console.log("Email: " + profile.getEmail());
+    showSidebarMessage('Welcome ' + profile.getGivenName() + '!');
+    showSidebarMessage('Your email ' + profile.getEmail() + '!');
+
+    // The ID token you need to pass to your backend:
+    const id_token = googleUser.getAuthResponse().id_token;
+    console.log("ID Token: " + id_token);
+
+    window.location.replace(window.location.origin + '/login?username=' + profile.getEmail());
+
+    $("#signOutId").show();
+  }
+
+  function signOut() {
+    $("#signOutId").hide();
+
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function() {
+      console.log('User signed out.');
+    });
+
+    showSidebarMessage('See you!');
+    $("#signInId").show();
+  }
+
+  $(document).ready(function() {
+    console.log('ready');
+    console.log(googleUser);
+    if (googleUser && googleUser.isSignedIn()) {
+      showSidebarMessage('Welcome Back!' + profile?profile.getEmail():'');
+      $("#signInId").hide();
+      $("#signOutId").show();
+    } else {
+      showSidebarMessage('Welcome Guest!');
+      $("#signInId").show();
+      $("#signOutId").hide();
+    }
+  });
 </script>
 </body>
 
