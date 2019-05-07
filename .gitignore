@@ -40,3 +40,4 @@ HELP.md
 /src/main/resources/application-dev.properties.bak
 /src/main/resources/application-test.properties.bak
 /src/main/resources/application-prod.properties.bak
+/src/main/resources/static/client_secret.json
