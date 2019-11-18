@@ -1,0 +1,6 @@
+spring.profiles.active
+prod
+
+References:
+https://medium.com/@skywalkerhunter/spring-boot-environment-switch-made-easy-d6308f01be56
+

@@ -1,0 +1,1 @@
+3.2 Change the following: spring.datasource.username=YOUR_DB_INSTANCE_USERNAME spring.datasource.password=YOUR_DB_INSTANCE_PASSWORD oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_HOSTNAME
