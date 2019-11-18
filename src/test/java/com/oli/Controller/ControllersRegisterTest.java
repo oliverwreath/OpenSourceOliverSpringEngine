@@ -72,7 +72,7 @@ class ControllersRegisterTest {
         log.debug("result = {}", mvcResult.getResponse().getContentAsString());
 
         // Login baby! - isUnauthorized() - 401
-        RequestBuilder builder2 = formLogin().user("user_userEmail@777").password("user_password_963");
+        RequestBuilder builder2 = formLogin().user("user_userEmail@777").password("user_password_WRONG");
         MvcResult mvcResult2 = mockMvc.perform(builder2)
                 .andDo(print())
                 .andExpect(status().isUnauthorized())
