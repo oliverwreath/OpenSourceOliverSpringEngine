@@ -46,11 +46,14 @@
 # Kick Start with Quick Configurations 
 * 1 rename src/main/resources/*.properties.bak TO *.properties
 
-* 2 It is EASY to use - simply run the dev environment - it SIMPLY WORKS! I put in an embedded h2 and tested, so you don't have to! 
+* 2 It is EASY to use - simply run the DEV environment - it SIMPLY WORKS! I put in an embedded h2 and tested, so you don't have to! 
 ![Run All Test](https://raw.githubusercontent.com/oliverwreath/OpenSourceOliverSpringEngine/08c13116f7d63fdf1fd591a8e80cef575ac051e4/src/main/resources/static/ReadmePictures/KickStart.JPG)
 Just tell Spring to use the JVM options (-Dspring.profiles.active=dev) as shown in the picture. 
 
-* 3 [Optional]for test environment - change the following: 
+* 3 for TEST environment:
+  * 3.1 Execute in your RDS: 
+create database spring_engine_test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+  * 3.2 Change the following: 
 spring.datasource.username=YOUR_DB_INSTANCE_USERNAME
 spring.datasource.password=YOUR_DB_INSTANCE_PASSWORD
 oliver.jpa.properties.hibernate.hostname=YOUR_DB_INSTANCE_HOSTNAME
