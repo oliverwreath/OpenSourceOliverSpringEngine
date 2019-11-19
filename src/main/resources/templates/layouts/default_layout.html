@@ -18,6 +18,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Pace progress bar -->
   <link rel="stylesheet" data-th-href="@{https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-loading-bar.min.css}" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-loading-bar.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+  </script>
 </head>
 
 <body class="d-flex flex-column h-100 text-center" style="background-color: #f5f5f5; padding-top: 40px;">
@@ -75,6 +77,24 @@
             </li>
             <li class="nav-item" data-sec-authorize="isAnonymous()">
               <a data-th-text="#{text.join_for_free}" class="nav-link" href="/signup"></a>
+            </li>
+            <li>
+              <select id="locales">
+                <option value="" data-th-text="#{lang.change}"></option>
+                <option value="en" data-th-text="#{lang.en}"></option>
+                <option value="fr" data-th-text="#{lang.fr}"></option>
+                <option value="ch" data-th-text="#{lang.ch}"></option>
+              </select>
+              <script type="text/javascript">
+                $(document).ready(function() {
+                  $("#locales").change(function () {
+                    var selectedOption = $('#locales').val();
+                    if (selectedOption != ''){
+                      window.location.replace('index?lang=' + selectedOption);
+                    }
+                  });
+                });
+              </script>
             </li>
             <li class="nav-item" data-sec-authorize="hasAnyRole('ADMIN', 'DEVELOPER')">
               <a class="nav-link" href="../admin/index" data-th-text="#{text.admin_portal}"></a>
