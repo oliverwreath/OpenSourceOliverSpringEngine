@@ -5,7 +5,7 @@
 
 	<groupId>com.oli</groupId>
 	<artifactId>OliverSpringEngine</artifactId>
-	<version>0.0.0.0.0.0.0.9.4-SNAPSHOT</version>
+	<version>0.0.0.0.0.0.0.9.5-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>OliverSpringEngine</name>
 	<description>OliverSpringEngine project for Spring Boot</description>
