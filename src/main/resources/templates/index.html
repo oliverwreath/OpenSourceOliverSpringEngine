@@ -15,33 +15,36 @@
 <!--</header>-->
 
 <div data-layout-fragment="content">
-  <h3 class="mt-5">Usage Guide: </h3>
+  <h3 class="mt-5">Welcome to Oliver Cloud Data Consultancy!</h3>
 
   <ul>
+    <li>This is a simple Marketing Website Demo!<br>
+    </li>
 <!--    <li>For Google Sign-in activation: <br>-->
 <!--      Please fill in your Google_CLIENT_ID: <br>-->
 <!--      &lt;meta name=&quot;google-signin-client_id&quot; content=&quot;YOUR_CLIENT_ID.apps.googleusercontent.com&quot;&gt;<br>-->
 <!--      You can get one from <a href="https://developers.google.com/identity/sign-in/web/">here</a></li>-->
-    <li>For Accepting PayPal payments: <br>
-      You can sign-up and get a button from <a href="https://www.paypal.com/ca/webapps/mpp/paypal-payments-standard">here</a>
+    <li>Click the PayPal "Buy Now" button to pay me! I can create one for you too!<br>
+<!--      You can sign-up and get a button from <a href="https://www.paypal.com/ca/webapps/mpp/paypal-payments-standard">here</a>-->
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+               alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+    </li>
+    <li>Higher Customer Conversion with your company branded Marketing video!<br>
+      <video width="400" controls>
+        <source src="../static/International_Village_2019_Commercial.mp4" type="video/mp4">
+        <!--    <source src="mov_bbb.ogg" type="video/ogg">-->
+        Your browser does not support HTML5 video.
+      </video>
     </li>
   </ul>
 <!--  <div id="signInId" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" type="hidden"></div>-->
 <!--  <a id="signOutId" href="#" onclick="signOut();" type="hidden">Sign out</a>-->
 
-  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-    <input type="hidden" name="cmd" value="_s-xclick">
-    <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID">
-    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
-           alt="PayPal - The safer, easier way to pay online!">
-    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-  </form>
-
-  <video width="400" controls>
-    <source src="../static/International_Village_2019_Commercial.mp4" type="video/mp4">
-<!--    <source src="mov_bbb.ogg" type="video/ogg">-->
-    Your browser does not support HTML5 video.
-  </video>
 </div>
 
 <!--<footer data-layout-fragment="footer" hidden>-->
